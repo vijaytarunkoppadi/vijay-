@@ -1,13 +1,13 @@
-#include<lpc21xx.h>
-#include"header.h"
-void array_shift(int *p,int l){
+#include<lpc21xx.h>  //header file lpc21xx 
+#include"header.h"   // the header contain uart funtion declartions
+void array_shift(int *p,int l){    // shifting of array operends
 	int k;
 	for(k=l+1;p[k];k++){
 		p[k]=p[k+1];
 	}
 	p[k-1]=0;
 }	
-void char_shift(char *p,int l){
+void char_shift(char *p,int l){   // shifting of operator 
 	int k;
 	for(k=l;p[k];k++){
 		p[k]=p[k+1];
@@ -36,10 +36,6 @@ for(i=0;i<10;i++){
 	if(ch[i]=='=')
 		break;
 }
-//for(i=0;arr[i];i++){
-//uart0_tx_integer(arr[i]);
-//uart0_tx(' ');
-//}
 for(m=0;ch[m];m++){
 for(l=0;ch[l];l++)
 {
